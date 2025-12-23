@@ -9,25 +9,20 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #cce7ff; /* watery light blue */
+      background-color: #cce7ff;
       color: #333;
       scroll-behavior: smooth;
     }
 
     header {
-      background-color: #66b3ff; /* darker water blue */
+      background-color: #66b3ff;
       padding: 25px;
       text-align: center;
       color: white;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
     nav {
-      background-color: #99ccff; /* medium blue */
+      background-color: #99ccff;
       padding: 12px;
       text-align: center;
       position: sticky;
@@ -43,7 +38,7 @@
     }
 
     nav a:hover {
-      color: #003366; /* deep blue on hover */
+      color: #003366;
     }
 
     .container {
@@ -52,35 +47,54 @@
       padding: 30px;
     }
 
-    /* Home Page Boxes - lighter gradient */
+    /* HOME GRID */
     .home-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
     }
 
+    /* HOME CARDS */
     .home-card {
-      background: linear-gradient(135deg, #e0f2ff, #cce7ff); /* lighter gradient */
-      border-radius: 12px;
-      padding: 30px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #e6f5ff, #d6ecff);
+      border-radius: 15px;
+      padding: 40px 20px;
+      height: 160px;
       cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       transition: transform 0.3s, box-shadow 0.3s;
       text-align: center;
-      color: #003366; /* darker blue text for readability */
       font-size: 20px;
       font-weight: bold;
+      color: #003366;
     }
 
     .home-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     }
 
-    /* Section Cards */
+    /* WAVE LAYERS */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .wave1 {
+      opacity: 0.35;
+    }
+
+    .wave2 {
+      opacity: 0.55;
+    }
+
+    /* SECTION CARDS */
     .card {
-      background-color: #e6f2ff; /* very light blue */
+      background-color: #eaf4ff;
       border-radius: 12px;
       padding: 25px;
       margin-bottom: 25px;
@@ -88,89 +102,121 @@
     }
 
     footer {
-      background-color: #66b3ff; /* match header */
+      background-color: #66b3ff;
       text-align: center;
       padding: 15px;
-      font-size: 14px;
       color: white;
+      font-size: 14px;
     }
 
-    a.button-link {
-      color: #003366; /* deep blue */
+    a {
+      color: #003366;
       font-weight: bold;
-      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Walk for Water</h1>
-    <p>WBMS Character Council Initiative</p>
-  </header>
+<header>
+  <h1>Walk for Water</h1>
+  <p>WBMS Character Council</p>
+</header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#background">Background Info</a>
-    <a href="#problem">Problem</a>
-    <a href="#solution">Solution</a>
-    <a href="#action">What You Can Do</a>
-  </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#background">Background Info</a>
+  <a href="#problem">Problem</a>
+  <a href="#solution">Solution</a>
+  <a href="#action">What You Can Do</a>
+</nav>
 
-  <!-- Home Page: Lighter Water-Themed Boxes -->
-  <div id="home" class="container">
-    <div class="home-grid">
-      <div class="home-card" onclick="document.getElementById('background').scrollIntoView()">
-        💧 Background Info
-      </div>
-      <div class="home-card" onclick="document.getElementById('problem').scrollIntoView()">
-        💧 Problem
-      </div>
-      <div class="home-card" onclick="document.getElementById('solution').scrollIntoView()">
-        💧 Solution
-      </div>
-      <div class="home-card" onclick="document.getElementById('action').scrollIntoView()">
-        💧 What You Can Do
-      </div>
+<!-- HOME -->
+<div id="home" class="container">
+  <div class="home-grid">
+
+    <div class="home-card" onclick="document.getElementById('background').scrollIntoView()">
+      💧 Background Info
+      <svg class="wave wave1" viewBox="0 0 1440 120">
+        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
+      </svg>
+      <svg class="wave wave2" viewBox="0 0 1440 120">
+        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
+      </svg>
     </div>
-  </div>
 
-  <!-- Background Info Section -->
-  <div id="background" class="container">
-    <div class="card">
-      <h2>Background Info</h2>
-      <p>South Sudan is a country in Central Africa and its capital is Juba. It's the most recent country to gain independence. It has more than 60 ethnic groups and over 60 indigenous languages. It has been through two civil wars, both of them happened when it was a part of Sudan. It has a population of nearly 12 million people. It has a few problems such as poverty, lack of education, government instability, and corruption. The main problem is limited access to clean water, and it's the problem that we're trying to help solve.</p>
+    <div class="home-card" onclick="document.getElementById('problem').scrollIntoView()">
+      💧 Problem
+      <svg class="wave wave1" viewBox="0 0 1440 120">
+        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
+      </svg>
+      <svg class="wave wave2" viewBox="0 0 1440 120">
+        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
+      </svg>
     </div>
-  </div>
 
-  <!-- Problem Section -->
-  <div id="problem" class="container">
-    <div class="card">
-      <h2>Problem</h2>
-      <p>The problem isn't just unequal access to water, it's also the diseases that come with the water. There are many waterborne diseases like cholera, typhoid, and dysentery. The reason there are so many diseases in the water is because of the lack of sanitation. You might think that the only effect of unequal access to water is that people could get diseases. This isn't true. Because of this problem, girls will not be able to attend school and get educated, there will be a low literacy rate, low investment in human capital, economy decreasing, government instability, poverty, and even less access to water. This cycle is endless, so we need to solve this problem and prevent the other ones from happening.</p>
+    <div class="home-card" onclick="document.getElementById('solution').scrollIntoView()">
+      💧 Solution
+      <svg class="wave wave1" viewBox="0 0 1440 120">
+        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
+      </svg>
+      <svg class="wave wave2" viewBox="0 0 1440 120">
+        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
+      </svg>
     </div>
-  </div>
 
-  <!-- Solution Section -->
-  <div id="solution" class="container">
-    <div class="card">
-      <h2>Solution</h2>
-      <p>For the past 4 years, we have partnered with Water is Basic to repair wells in South Sudan. Our goal is to provide access to clean water to South Sudan by 2030. Our goal for this year is to raise $15,000 to help 30 villages in South Sudan.</p>
+    <div class="home-card" onclick="document.getElementById('action').scrollIntoView()">
+      💧 What You Can Do
+      <svg class="wave wave1" viewBox="0 0 1440 120">
+        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
+      </svg>
+      <svg class="wave wave2" viewBox="0 0 1440 120">
+        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
+      </svg>
     </div>
-  </div>
 
-  <!-- What You Can Do Section -->
-  <div id="action" class="container">
-    <div class="card">
-      <h2>What You Can Do</h2>
-      <p>You can donate using this link here: <a class="button-link" href="https://secure.qgiv.com/event/wbm_amm_walk4water_2026/" target="_blank">Donate</a> and spread the word to help gather awareness so we can solve this problem. You can also subscribe to our YouTube channel by searching up "WBMS7CC". Remember, it takes a village to save a village! Will you be a part of this?</p>
-    </div>
   </div>
+</div>
 
-  <footer>
-    © 2026 Walk for Water | WBMS Character Council
-  </footer>
+<!-- BACKGROUND -->
+<div id="background" class="container">
+  <div class="card">
+    <h2>Background Info</h2>
+    <p>South Sudan is a country in Central Africa and its capital is Juba. It is the most recent country to gain independence. It has more than 60 ethnic groups and over 60 indigenous languages. It has been through two civil wars while it was part of Sudan. It has a population of nearly 12 million people. Major challenges include poverty, lack of education, government instability, corruption, and most importantly limited access to clean water.</p>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div id="problem" class="container">
+  <div class="card">
+    <h2>Problem</h2>
+    <p>Unequal access to water also causes waterborne diseases such as cholera, typhoid, and dysentery due to poor sanitation. This problem affects education, especially for girls, lowers literacy rates, weakens the economy, increases poverty, and creates an endless cycle that must be broken.</p>
+  </div>
+</div>
+
+<!-- SOLUTION -->
+<div id="solution" class="container">
+  <div class="card">
+    <h2>Solution</h2>
+    <p>For the past 4 years, we have partnered with Water is Basic to repair wells in South Sudan. Our goal is to provide access to clean water by 2030. This year, we aim to raise $15,000 to help 30 villages.</p>
+  </div>
+</div>
+
+<!-- ACTION -->
+<div id="action" class="container">
+  <div class="card">
+    <h2>What You Can Do</h2>
+    <p>You can donate here:
+      <a href="https://secure.qgiv.com/event/wbm_amm_walk4water_2026/" target="_blank">Donate</a><br><br>
+      You can also subscribe to our YouTube channel by searching <strong>WBMS7CC</strong>.<br><br>
+      <em>It takes a village to save a village. Will you be a part of this?</em>
+    </p>
+  </div>
+</div>
+
+<footer>
+  © 2026 Walk for Water | WBMS Character Council
+</footer>
 
 </body>
 </html>
