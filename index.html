@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -50,46 +54,32 @@
     /* HOME GRID */
     .home-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
     }
 
-    /* HOME CARDS */
+    /* HOME BOXES */
     .home-card {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, #e6f5ff, #d6ecff);
-      border-radius: 15px;
-      padding: 40px 20px;
-      height: 160px;
+      background: linear-gradient(135deg, #eef8ff, #dbeeff);
+      border-radius: 12px;
+      padding: 18px;
+      height: 85px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: transform 0.25s, box-shadow 0.25s;
       text-align: center;
-      font-size: 20px;
+      font-size: 17px;
       font-weight: bold;
       color: #003366;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .home-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-    }
-
-    /* WAVE LAYERS */
-    .wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-
-    .wave1 {
-      opacity: 0.35;
-    }
-
-    .wave2 {
-      opacity: 0.55;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
     }
 
     /* SECTION CARDS */
@@ -101,17 +91,31 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
+    /* DONATE BUTTON */
+    .donate-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 28px;
+      background-color: #3399ff;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .donate-button:hover {
+      background-color: #1f7fd6;
+      transform: scale(1.05);
+    }
+
     footer {
       background-color: #66b3ff;
       text-align: center;
       padding: 15px;
       color: white;
       font-size: 14px;
-    }
-
-    a {
-      color: #003366;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -134,55 +138,33 @@
 <!-- HOME -->
 <div id="home" class="container">
   <div class="home-grid">
-
     <div class="home-card" onclick="document.getElementById('background').scrollIntoView()">
       💧 Background Info
-      <svg class="wave wave1" viewBox="0 0 1440 120">
-        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
-      </svg>
-      <svg class="wave wave2" viewBox="0 0 1440 120">
-        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
-      </svg>
     </div>
-
     <div class="home-card" onclick="document.getElementById('problem').scrollIntoView()">
       💧 Problem
-      <svg class="wave wave1" viewBox="0 0 1440 120">
-        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
-      </svg>
-      <svg class="wave wave2" viewBox="0 0 1440 120">
-        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
-      </svg>
     </div>
-
     <div class="home-card" onclick="document.getElementById('solution').scrollIntoView()">
       💧 Solution
-      <svg class="wave wave1" viewBox="0 0 1440 120">
-        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
-      </svg>
-      <svg class="wave wave2" viewBox="0 0 1440 120">
-        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
-      </svg>
     </div>
-
     <div class="home-card" onclick="document.getElementById('action').scrollIntoView()">
       💧 What You Can Do
-      <svg class="wave wave1" viewBox="0 0 1440 120">
-        <path fill="#b3dcff" d="M0,80 C240,120 480,40 720,60 960,80 1200,40 1440,60 L1440,120 L0,120 Z"></path>
-      </svg>
-      <svg class="wave wave2" viewBox="0 0 1440 120">
-        <path fill="#99ccff" d="M0,60 C240,100 480,60 720,80 960,100 1200,60 1440,80 L1440,120 L0,120 Z"></path>
-      </svg>
     </div>
-
   </div>
 </div>
 
-<!-- BACKGROUND -->
+<!-- BACKGROUND INFO -->
 <div id="background" class="container">
   <div class="card">
     <h2>Background Info</h2>
-    <p>South Sudan is a country in Central Africa and its capital is Juba. It is the most recent country to gain independence. It has more than 60 ethnic groups and over 60 indigenous languages. It has been through two civil wars while it was part of Sudan. It has a population of nearly 12 million people. Major challenges include poverty, lack of education, government instability, corruption, and most importantly limited access to clean water.</p>
+    <p>
+      South Sudan is a country in Central Africa and its capital is Juba. It is the
+      most recent country to gain independence. It has more than 60 ethnic groups
+      and over 60 indigenous languages. It has been through two civil wars while it
+      was part of Sudan. It has a population of nearly 12 million people. Major
+      challenges include poverty, lack of education, government instability,
+      corruption, and most importantly limited access to clean water.
+    </p>
   </div>
 </div>
 
@@ -190,7 +172,12 @@
 <div id="problem" class="container">
   <div class="card">
     <h2>Problem</h2>
-    <p>Unequal access to water also causes waterborne diseases such as cholera, typhoid, and dysentery due to poor sanitation. This problem affects education, especially for girls, lowers literacy rates, weakens the economy, increases poverty, and creates an endless cycle that must be broken.</p>
+    <p>
+      Unequal access to water causes waterborne diseases such as cholera, typhoid,
+      and dysentery due to poor sanitation. This affects education, especially for
+      girls, lowers literacy rates, weakens the economy, and creates an endless
+      cycle that must be broken.
+    </p>
   </div>
 </div>
 
@@ -198,17 +185,33 @@
 <div id="solution" class="container">
   <div class="card">
     <h2>Solution</h2>
-    <p>For the past 4 years, we have partnered with Water is Basic to repair wells in South Sudan. Our goal is to provide access to clean water by 2030. This year, we aim to raise $15,000 to help 30 villages.</p>
+    <p>
+      For the past 4 years, we have partnered with Water is Basic to repair wells in
+      South Sudan. Our goal is to provide access to clean water by 2030. This year,
+      we aim to raise $15,000 to help 30 villages.
+    </p>
   </div>
 </div>
 
-<!-- ACTION -->
+<!-- WHAT YOU CAN DO -->
 <div id="action" class="container">
   <div class="card">
     <h2>What You Can Do</h2>
-    <p>You can donate here:
-      <a href="https://secure.qgiv.com/event/wbm_amm_walk4water_2026/" target="_blank">Donate</a><br><br>
-      You can also subscribe to our YouTube channel by searching <strong>WBMS7CC</strong>.<br><br>
+    <p>
+      You can help by donating and spreading awareness. Every contribution helps
+      bring clean water to communities in need.
+    </p>
+
+    <a class="donate-button"
+       href="https://secure.qgiv.com/event/wbm_amm_walk4water_2026/"
+       target="_blank">
+       Donate Now
+    </a>
+
+    <p style="margin-top: 20px;">
+      You can also subscribe to our YouTube channel by searching
+      <strong>WBMS7CC</strong>.
+      <br><br>
       <em>It takes a village to save a village. Will you be a part of this?</em>
     </p>
   </div>
