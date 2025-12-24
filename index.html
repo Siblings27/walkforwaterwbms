@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Walk for Water | WBMS Character Council</title>
+  <title>Walk for Water | WBMS 7th Grade Character Council</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -48,7 +48,7 @@
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 30px;
+      padding: 35px; /* slightly more spacing for cleaner look */
     }
 
     /* HOME GRID */
@@ -61,7 +61,7 @@
     /* HOME BOXES */
     .home-card {
       background: linear-gradient(135deg, #eef8ff, #dbeeff);
-      border-radius: 12px;
+      border-radius: 15px; /* slightly more rounded */
       padding: 18px;
       height: 85px;
       cursor: pointer;
@@ -71,24 +71,31 @@
       font-size: 17px;
       font-weight: bold;
       color: #003366;
-
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    /* Subtle color accent on hover */
     .home-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 18px rgba(0,102,204,0.35); /* brighter shadow */
     }
 
     /* SECTION CARDS */
     .card {
       background-color: #eaf4ff;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 25px;
+      border-radius: 15px; /* slightly more rounded */
+      padding: 28px; /* more spacing */
+      margin-bottom: 30px; /* more spacing between cards */
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Underlined section headers */
+    .card h2 {
+      border-bottom: 2px solid #99ccff; /* soft underline */
+      padding-bottom: 5px;
+      margin-bottom: 18px;
     }
 
     /* DONATE BUTTON */
