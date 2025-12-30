@@ -2,31 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Walk for Water | WBMS 7th Grade Character Council</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    * {
+  <title>Walk for Water | WBMS 7th Grade Character Council
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #cce7ff;
+      background-color: #e6f2ff; /* softer page blue */
       color: #333;
       scroll-behavior: smooth;
     }
 
     header {
-      background-color: #66b3ff;
+      background-color: #5fa8e8; /* calmer header blue */
       padding: 25px;
       text-align: center;
       color: white;
     }
 
     nav {
-      background-color: #99ccff;
+      background-color: #9ec9f2;
       padding: 12px;
       text-align: center;
       position: sticky;
@@ -48,7 +44,7 @@
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 35px; /* slightly more spacing for cleaner look */
+      padding: 35px;
     }
 
     /* HOME GRID */
@@ -60,12 +56,12 @@
 
     /* HOME BOXES */
     .home-card {
-      background: linear-gradient(135deg, #eef8ff, #dbeeff);
-      border-radius: 15px; /* slightly more rounded */
+      background: linear-gradient(135deg, #f5fbff, #e3f0ff);
+      border-radius: 15px;
       padding: 18px;
       height: 85px;
       cursor: pointer;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
       transition: transform 0.25s, box-shadow 0.25s;
       text-align: center;
       font-size: 17px;
@@ -76,24 +72,23 @@
       justify-content: center;
     }
 
-    /* Subtle color accent on hover */
     .home-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 18px rgba(0,102,204,0.35); /* brighter shadow */
+      box-shadow: 0 6px 18px rgba(0,102,204,0.3);
     }
 
     /* SECTION CARDS */
     .card {
-      background-color: #eaf4ff;
-      border-radius: 15px; /* slightly more rounded */
-      padding: 28px; /* more spacing */
-      margin-bottom: 30px; /* more spacing between cards */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: #f7fbff; /* almost white */
+      border-radius: 15px;
+      padding: 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
     /* Underlined section headers */
     .card h2 {
-      border-bottom: 2px solid #99ccff; /* soft underline */
+      border-bottom: 2px solid #9ec9f2;
       padding-bottom: 5px;
       margin-bottom: 18px;
     }
@@ -118,7 +113,7 @@
     }
 
     footer {
-      background-color: #66b3ff;
+      background-color: #5fa8e8;
       text-align: center;
       padding: 15px;
       color: white;
@@ -131,7 +126,7 @@
 
 <header>
   <h1>Walk for Water</h1>
-  <p>WBMS Character Council</p>
+  <p>7th Grade Character Council</p>
 </header>
 
 <nav>
@@ -139,6 +134,7 @@
   <a href="#background">Background Info</a>
   <a href="#problem">Problem</a>
   <a href="#solution">Solution</a>
+  <a href="#attend">Attend the Walk!</a>
   <a href="#action">What You Can Do</a>
 </nav>
 
@@ -153,6 +149,9 @@
     </div>
     <div class="home-card" onclick="document.getElementById('solution').scrollIntoView()">
       💧 Solution
+    </div>
+    <div class="home-card" onclick="document.getElementById('attend').scrollIntoView()">
+      💧 Attend the Walk!
     </div>
     <div class="home-card" onclick="document.getElementById('action').scrollIntoView()">
       💧 What You Can Do
@@ -200,6 +199,31 @@
   </div>
 </div>
 
+<!-- ATTEND THE WALK -->
+<div id="attend" class="container">
+  <div class="card">
+    <h2>Attend the Walk!</h2>
+    <p>
+      If you believe in the power of <strong>CITIZENSHIP AND POSITIVITY</strong>,
+      please join us for a day of learning as we walk in solidarity with the women
+      and children of South Sudan who walk miles each day to access water.
+    </p>
+
+    <p><strong>LEARN. EAT. SHOP. PLAY.</strong></p>
+
+    <p>
+      All proceeds from the day will go to Water is Basic in an effort to restore
+      access to clean water through this amazing women-led repair initiative.
+    </p>
+
+    <p>
+      <strong>Sunday, March 22, 2026</strong><br>
+      2–5 pm<br>
+      Webb Bridge Middle School
+    </p>
+  </div>
+</div>
+
 <!-- WHAT YOU CAN DO -->
 <div id="action" class="container">
   <div class="card">
@@ -212,7 +236,7 @@
     <a class="donate-button"
        href="https://secure.qgiv.com/event/wbm_amm_walk4water_2026/"
        target="_blank">
-       Donate Now
+       Donate
     </a>
 
     <p style="margin-top: 20px;">
@@ -225,7 +249,7 @@
 </div>
 
 <footer>
-  © 2026 Walk for Water | WBMS Character Council
+  © 2026 Walk for Water | WBMS 7th Grade Character Council
 </footer>
 
 </body>
